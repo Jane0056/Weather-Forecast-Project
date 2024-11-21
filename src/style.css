@@ -17,3 +17,16 @@ body {
     overflow: hidden;
 }
 
+.weather-overlay {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent White Overlay */
+    backdrop-filter: blur(5px);
+    /* Blurred Effect */
+    text-align: center;
+    color: #333;
+}

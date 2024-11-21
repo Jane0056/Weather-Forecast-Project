@@ -16,10 +16,10 @@
 
 <body>
     <div class="weather-app">
-        <header>
-            <form id="search-form">
+        <header class="header">
+            <form id="search-form" class="search-form">
                 <input type="search" placeholder="Enter a city..." required class="search-input" id="search-input" />
-                <input type="submit" value="Search" class="search-button" />
+                <button type="submit" class="search-button">Search</button>
             </form>
         </header>
 
@@ -34,24 +34,24 @@
                     </p>
                 </div>
                 <div class="current-temperature" id="current-temperature">
-                    <span id="weather-icon"></span>
+                    <span id="weather-icon" class="weather-icon"></span>
                     <span class="current-temperature-value" id="current-temperature-value">24</span><span
                         class="current-temperature-unit">°C</span>
                 </div>
             </div>
-            <div class="weather-forecast" id="forecasr"></div>
+            <div class="weather-forecast" id="forecast"></div>
         </main>
+
         <footer>
             <p>
                 This project was coded by
                 <a href="https://github.com/Jane0056/Weather-App-Project" target="_blank">Chioma Jane Agwuncha</a> and
                 is
-                <a href="https://github.com/Jane0056/Weather-App-Project" target="_blank"> on GitHub</a> and
+                <a href="https://github.com/Jane0056/Weather-App-Project" target="_blank">on GitHub</a> and
                 <a href="https://jane-weatherapp.netlify.app/" target="_blank">hosted on Netlify</a>
             </p>
         </footer>
     </div>
-
 </body>
 
 </html>
