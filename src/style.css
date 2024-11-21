@@ -8,17 +8,21 @@
 body {
     font-family: "Roboto", sans-serif;
     height: 100vh;
-    background: linear-gradient(to bottom, #7dbff1, #d2ecff),
+    background: linear-gradient(to bottom, rgba(125, 191, 241, 0.8), rgba(210, 236, 255, 0.8)),
         url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/037/original/sunny_photo.jpg?1732184632") no-repeat center center fixed;
     background-blend-mode: overlay;
     background-size: cover;
-    color: #333;
+    color: #2d3436;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow-y: auto;
-    backdrop-filter: blur(2px);
+
+    /* Animation for dynamic background */
+    animation: moveClouds 30s linear infinite;
+    transition: background 1s ease-in-out;
 }
+
 
 /* Overlay for better readability */
 body::before {
@@ -28,13 +32,13 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     z-index: -1;
 }
 
 /* Enhanced link styles */
 a {
-    color: #4facfe;
+    color: #2e86de;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -49,10 +53,10 @@ a:hover {
 .weather-app {
     width: 90%;
     max-width: 600px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 15px;
-    margin: 60px auto;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     animation: fadeIn 1.2s ease-in-out;
 }
@@ -84,6 +88,7 @@ a:hover {
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.95);
     color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-input:focus {
@@ -99,17 +104,19 @@ a:hover {
     border: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
     cursor: pointer;
 }
 
 .search-button:hover {
     background: #007bff;
+    transform: scale(1.05);
 }
 
 /* Main Section */
 .current-weather {
     padding: 25px 20px;
-    background: linear-gradient(to bottom, #6ac2ff, #00a884);
+    background: linear-gradient(to bottom, rgba(106, 194, 255, 0.9), rgba(0, 168, 132, 0.9));
     color: #fff;
     text-align: center;
     border-radius: 0 0 15px 15px;
@@ -123,7 +130,7 @@ a:hover {
 
 .current-details {
     font-size: 15px;
-    color: #e1e1e1
+    color: #dfe6e9;
 }
 
 .current-temperature {
@@ -146,7 +153,7 @@ a:hover {
 }
 
 .forecast-item {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.85);
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -184,17 +191,86 @@ footer a:hover {
     color: #ddd;
 }
 
+
+/* Responsive Styles */
+
+@media (max-width: 480px) {
+    .weather-app {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .search-input,
+    .search-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+
+    .current-city {
+        font-size: 24px;
+    }
+
+    .current-temperature {
+        font-size: 36px;
+    }
+
+    .weather-forecast {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
+
     .weather-app {
         max-width: 500px;
     }
 
-    .current-temperature-value {
-        font-size: 60px;
+    .current-city {
+        font-size: 28px;
     }
 
-    .current-details {
-        font-size: 14px;
+    .current-temperature-value {
+        font-size: 70px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+    .weather-app {
+        max-width: 700px;
+    }
+
+    .current-city {
+        font-size: 38px;
+    }
+
+    .current-temperature-value {
+        font-size: 90px;
+    }
+}
+
+/* Animations */
+@keyframes moveClouds {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
