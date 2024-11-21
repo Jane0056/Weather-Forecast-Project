@@ -10,17 +10,18 @@ body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     height: 100vh;
-    background: linear-gradient(to bottom, #87CEEB, #dbeafe),
+    background: linear-gradient(to bottom, #85c9ff, #d9f3ff),
         url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/037/original/sunny_photo.jpg?1732184632") no-repeat center center fixed;
     background-blend-mode: overlay;
     background-size: cover;
-    background-color: #87CEEB;
+    background-color: #85c9ff;
     /* Fallback color */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow-y: auto;
     /* Allow scrolling if content exceeds viewport */
+
     /* Animation for dynamic background */
     animation: moveClouds 30s linear infinite;
     transition: background 1s ease-in-out;
@@ -38,14 +39,14 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.35);
     /* Slightly darker overlay for improved readability */
     z-index: -1;
 }
 
 /* Enhanced link styles */
 a {
-    color: #4facfe;
+    color: #6ac2ff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -53,6 +54,7 @@ a {
 a:hover {
     color: #004080;
 }
+
 
 /* Weather App Container */
 .weather-app {
@@ -66,17 +68,16 @@ a:hover {
     animation: fadeIn 1.2s ease-in-out;
 }
 
-
 /* Header */
 .header {
-    padding: 20px 30px;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 25px 35px;
+    background: linear-gradient(to right, #4facfe, #6ac2ff);
     color: white;
-    font-size: 19px;
-    padding-bottom: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
-    border-bottom: 1px solid #f9f7feec;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px 10px 0 0;
 }
 
 /* Form and Input */
@@ -94,10 +95,16 @@ a:hover {
     width: 70%;
     margin-right: 10px;
     outline: none;
-    display: inline-block;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.search-input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
 }
 
 .search-button {
@@ -107,15 +114,15 @@ a:hover {
     background: #4facfe;
     color: white;
     border: none;
-    display: inline;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
     cursor: pointer;
 }
 
 .search-button:hover {
     background: #007bff;
+    transform: scale(1.05);
 }
 
 
