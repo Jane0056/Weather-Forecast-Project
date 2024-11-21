@@ -104,3 +104,8 @@ body {
     margin: 10px 0;
     line-height: 45px;
 }
+
+.current-details {
+    font-size: 1rem;
+    color: #555;
+}
