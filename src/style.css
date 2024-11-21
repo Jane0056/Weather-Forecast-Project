@@ -1,3 +1,10 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* General Styles */
 body {
     margin: 0;
@@ -7,46 +14,80 @@ body {
         url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/037/original/sunny_photo.jpg?1732184632") no-repeat center center fixed;
     background-blend-mode: overlay;
     background-size: cover;
+    background-color: #87CEEB;
+    /* Fallback color */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow-y: auto;
+    /* Allow scrolling if content exceeds viewport */
+    /* Animation for dynamic background */
+    animation: moveClouds 30s linear infinite;
+    transition: background 1s ease-in-out;
+    backdrop-filter: blur(2px);
+    /* Subtle blur for better readability */
+    color: #fff;
+    /* Default text color for better contrast */
 }
 
-/* Enhanced link styles */
+/* Accessibility Improvements */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Slightly darker overlay for improved readability */
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 a {
-    color: #4facfe;
+    color: #7c50ec;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #004080;
+    color: #0d0229;
 }
 
-/* Weather App Container */
 .weather-app {
     width: 90%;
     max-width: 600px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     margin: 48px auto;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Header */
+/* Header Styles */
 .header {
-    padding: 20px 30px;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    color: white;
-    font-size: 19px;
-    font-weight: bold;
+    padding: 20px;
     text-align: center;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    border-bottom: 1px solid #f9f7feec;
+    font-size: 19px;
+    padding-bottom: 30px;
 }
-
-
 
 .search-form {
     display: flex;
@@ -237,12 +278,12 @@ footer a:hover {
 }
 
 @keyframes moveClouds {
-    from {
+    0% {
         background-position: 0% 0%;
     }
 
-    to {
-        background-position: 100% 100%;
+    100% {
+        background-position: 100% 0%;
     }
 }
 
@@ -280,6 +321,12 @@ footer a:hover {
 
 /* Tablets */
 @media (max-width: 768px) {
+    body {
+        background-size: auto;
+        animation: none;
+        /* Disable animation for performance */
+    }
+
     .weather-app {
         max-width: 500px;
         margin: 30px auto;
