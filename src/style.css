@@ -35,3 +35,10 @@ body {
     color: #fff;
     font-size: 1.2rem;
 }
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
