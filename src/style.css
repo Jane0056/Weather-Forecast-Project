@@ -22,8 +22,6 @@ body {
     /* Animation for dynamic background */
     animation: moveClouds 30s linear infinite;
     transition: background 1s ease-in-out;
-    background-color: #85c9ff;
-    /* Fallback color */
     backdrop-filter: blur(2px);
     /* Subtle blur for better readability */
 }
