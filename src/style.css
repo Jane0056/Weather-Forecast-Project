@@ -225,3 +225,113 @@ footer a {
 footer a:hover {
     color: #0d0229;
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveClouds {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+/* Responsive Styles */
+
+/* Phones */
+@media (max-width: 480px) {
+    .weather-app {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .search-input {
+        width: calc(100% - 90px);
+        font-size: 14px;
+    }
+
+    .search-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .current-city {
+        font-size: 28px;
+    }
+
+    .current-temperature-value {
+        font-size: 60px;
+    }
+
+    .current-details {
+        font-size: 14px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .weather-app {
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    .search-input {
+        font-size: 15px;
+    }
+
+    .search-button {
+        font-size: 15px;
+        padding: 12px 25px;
+    }
+
+    .current-city {
+        font-size: 32px;
+    }
+
+    .current-weather {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .current-temperature-value {
+        font-size: 70px;
+    }
+
+    .weather-forecast {
+        justify-content: space-around;
+    }
+
+    .forecast-item {
+        width: 90%;
+    }
+}
+
+
+/* Large Screens */
+@media (min-width: 1024px) {
+    .weather-app {
+        max-width: 700px;
+    }
+
+    .current-city {
+        font-size: 38px;
+    }
+
+    .current-temperature-value {
+        font-size: 90px;
+    }
+}
