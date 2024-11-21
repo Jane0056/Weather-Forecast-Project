@@ -134,7 +134,7 @@ a:hover {
 
 .weather-icon {
     font-size: 64px;
-    color: #ffeb3b;
+    color: #ffda75;
 }
 
 /* Forecast Section */
@@ -143,11 +143,10 @@ a:hover {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 15px;
     padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.9);
 }
 
 .forecast-item {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -177,7 +176,7 @@ footer {
 }
 
 footer a {
-    color: #095e80;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -185,67 +184,10 @@ footer a:hover {
     color: #ddd;
 }
 
-/* Animations */
-/* Keyframes for Moving Clouds Animation */
-@keyframes moveClouds {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    100% {
-        background-position: 100% 0%;
-    }
-}
-
-
-/* Reduce Animation for Accessibility */
-@media (prefers-reduced-motion: reduce) {
-    body {
-        animation: none;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
 /* Responsive Styles */
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .weather-app {
-        margin: 20px;
-        padding: 20px;
-    }
-
-    .search-input {
-        font-size: 14px;
-    }
-
-    .search-button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    .current-city {
-        font-size: 24px;
-    }
-
-    .current-temperature {
-        font-size: 36px;
-    }
-
-    .weather-forecast {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        max-width: 500px;
     }
 
     .current-temperature-value {
@@ -254,73 +196,5 @@ footer a:hover {
 
     .current-details {
         font-size: 14px;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        background-size: auto;
-        animation: none;
-        /* Disable animation for performance */
-    }
-
-    .weather-app {
-        max-width: 500px;
-        margin: 30px auto;
-        padding: 25px;
-    }
-
-    .search-input {
-        font-size: 14px;
-    }
-
-    .search-button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    .current-city {
-        font-size: 28px;
-    }
-
-    .current-temperature {
-        font-size: 36px;
-    }
-
-    .current-weather {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .current-temperature-value {
-        font-size: 70px;
-    }
-
-    .weather-forecast {
-        justify-content: space-around;
-    }
-
-    .forecast-item {
-        width: 90%;
-    }
-}
-
-
-/* Large Screens */
-@media (min-width: 1024px) {
-    .weather-app {
-        max-width: 700px;
-    }
-
-    .current-city {
-        font-size: 38px;
-    }
-
-    .current-temperature-value {
-        font-size: 90px;
-    }
-
-    .current-temperature {
-        font-size: 48px;
     }
 }
