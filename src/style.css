@@ -67,10 +67,10 @@ a:hover {
 
 /* Header */
 .header {
-    padding: 25px 35px;
+    padding: 20px 30px;
     background: linear-gradient(to right, #4facfe, #6ac2ff);
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
 }
