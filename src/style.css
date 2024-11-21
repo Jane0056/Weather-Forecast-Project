@@ -1,0 +1,19 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF),
+        url("https: //s3.amazonaws.com/shecodesio-production/uploads/files/000/151/037/original/sunny_photo.jpg?1732184632") no-repeat center center fixed;
+    background-blend-mode: overlay;
+    background-size: cover;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: moveClouds 30s linear infinite;
+    transition: background 1s ease-in-out;
+    overflow: hidden;
+}
+
