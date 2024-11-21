@@ -17,6 +17,18 @@ body {
     transition: background 1s ease-in-out;
 }
 
+
+
+a {
+    color: #7c50ec;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0d0229;
+}
+
 .weather-app {
     width: 90%;
     max-width: 600px;
@@ -191,4 +203,25 @@ body {
 
 .weather-forecast-temperature {
     padding: 0 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    padding-top: 30px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    border-top: 1px solid #f9f7feec;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+footer a {
+    color: #7c50ec;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #0d0229;
 }
