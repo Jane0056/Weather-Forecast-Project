@@ -26,7 +26,7 @@ body {
     /* Subtle blur for better readability */
 }
 
-/* Accessibility Improvements */
+/* Overlay for better readability */
 body::before {
     content: '';
     position: absolute;
@@ -34,7 +34,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.4);
     /* Slightly darker overlay for improved readability */
     z-index: -1;
 }
