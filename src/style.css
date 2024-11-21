@@ -97,3 +97,10 @@ body {
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.6);
 }
+
+.current-city {
+    font-size: 32px;
+    color: #333;
+    margin: 10px 0;
+    line-height: 45px;
+}
