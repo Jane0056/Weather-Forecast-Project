@@ -125,52 +125,55 @@ a:hover {
     transform: scale(1.05);
 }
 
+/* Current Weather */
 
-/* Current Weather Section */
 .current-weather {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 20px;
     text-align: center;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(240, 240, 240, 0.7));
-    border-radius: 10px;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(240, 240, 240, 0.9));
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.weather-overlay {
-    backdrop-filter: blur(8px);
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.6);
-}
 
 .current-city {
-    font-size: 32px;
+    font-size: 35px;
     color: #333;
-    margin: 10px 0;
+    margin-bottom: 25px;
     line-height: 45px;
 }
 
 .current-details {
-    font-size: 16px;
-    color: #555;
+    color: #666;
+    font-size: 17px;
     line-height: 25px;
     font-weight: 500;
 }
 
 .current-details strong {
-    color: #f13f74;
+    color: #ff7f50;
 }
 
+/* Weather Icon and Temperature */
+
 .current-temperature {
+    color: #ff7f50;
+    margin-top: 20px;
+    font-size: 48p;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    margin-top: 20px;
+
+}
+
+.current-temperature {
+    font-size: 3rem;
+
 }
 
 .current-temperature-value {
