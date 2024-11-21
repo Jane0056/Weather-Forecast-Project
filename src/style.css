@@ -36,20 +36,17 @@ a:hover {
     animation: fadeIn 1.2s ease-in-out;
 }
 
-
-
-
-
-/* Header Styles */
+/* Header */
 .header {
-    padding: 20px;
-    text-align: center;
+    padding: 20px 30px;
     background: linear-gradient(to right, #4facfe, #00f2fe);
-    color: #fff;
-    border-bottom: 1px solid #f9f7feec;
+    color: white;
     font-size: 19px;
-    padding-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
 }
+
+
 
 .search-form {
     display: flex;
