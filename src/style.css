@@ -125,32 +125,40 @@ a:hover {
     transform: scale(1.05);
 }
 
-/* Current Weather */
-
+/* Main Section */
 .current-weather {
+    position: relative;
+    padding: 30px 20px;
+    background: linear-gradient(to bottom, rgba(9, 132, 227, 0.7), rgba(0, 184, 148, 0.8));
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(240, 240, 240, 0.9));
-    border-radius: 15px;
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.weather-overlay {
+    position: relative;
+    z-index: 10;
+}
 
 .current-city {
     font-size: 35px;
     color: #333;
     margin-bottom: 25px;
     line-height: 45px;
+    font-weight: 700;
 }
 
 .current-details {
     color: #666;
+    margin-top: 10px;
     font-size: 17px;
-    line-height: 25px;
+    line-height: 1.5;
+    opacity: 0.9;
     font-weight: 500;
 }
 
@@ -158,21 +166,16 @@ a:hover {
     color: #ff7f50;
 }
 
-/* Weather Icon and Temperature */
-
 .current-temperature {
-    color: #ff7f50;
+    color: #fff;
     margin-top: 20px;
-    font-size: 48p;
+    font-size: 48px;
     display: flex;
     align-items: center;
+    font-weight: 700;
     justify-content: center;
+    flex-direction: column;
     gap: 5px;
-
-}
-
-.current-temperature {
-    font-size: 3rem;
 
 }
 
@@ -181,7 +184,7 @@ a:hover {
     font-weight: bold;
     line-height: 85px;
     margin-right: 8px;
-    color: #ff7f50;
+
 }
 
 .current-temperature-unit {
@@ -191,9 +194,12 @@ a:hover {
 }
 
 .weather-icon {
-    font-size: 64rem;
-    color: #ff7f50;
+    font-size: 64px;
+    margin-bottom: 10px;
 }
+
+
+
 
 /* Forecast Section */
 .weather-forecast {
@@ -247,23 +253,21 @@ a:hover {
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    padding-top: 30px;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    border-top: 1px solid #f9f7feec;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
+    padding: 15px 20px;
+    background: rgba(9, 132, 227, 0.7);
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 footer a {
-    color: #7c50ec;
+    color: #74b9ff;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #0d0229;
+    color: #fff;
 }
 
 /* Animations */
