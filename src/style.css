@@ -3,8 +3,8 @@ body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     height: 100vh;
-    background: linear-gradient(to bottom, #87CEEB, #FFFFFF),
-        url("https: //s3.amazonaws.com/shecodesio-production/uploads/files/000/151/037/original/sunny_photo.jpg?1732184632") no-repeat center center fixed;
+    background: linear-gradient(to bottom, #87CEEB, #f3f3f3),
+        url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/037/original/sunny_photo.jpg?1732184632") no-repeat center center fixed;
     background-blend-mode: overlay;
     background-size: cover;
     padding: 0;
@@ -12,21 +12,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     animation: moveClouds 30s linear infinite;
     transition: background 1s ease-in-out;
-    overflow: hidden;
 }
 
-.weather-overlay {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.2);
-    /* Transparent White Overlay */
-    backdrop-filter: blur(5px);
-    /* Blurred Effect */
-    text-align: center;
-    color: #333;
+.weather-app {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeIn 1.2s ease-in-out;
 }
