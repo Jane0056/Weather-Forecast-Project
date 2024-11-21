@@ -5,30 +5,27 @@
     box-sizing: border-box;
 }
 
-/* General Styles */
 body {
-    margin: 0;
     font-family: "Roboto", sans-serif;
     height: 100vh;
     background: linear-gradient(to bottom, #85c9ff, #d9f3ff),
         url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/037/original/sunny_photo.jpg?1732184632") no-repeat center center fixed;
     background-blend-mode: overlay;
     background-size: cover;
-    background-color: #85c9ff;
-    /* Fallback color */
+    color: #fff;
+    /* Default text color for better contrast */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow-y: auto;
     /* Allow scrolling if content exceeds viewport */
-
     /* Animation for dynamic background */
     animation: moveClouds 30s linear infinite;
     transition: background 1s ease-in-out;
+    background-color: #85c9ff;
+    /* Fallback color */
     backdrop-filter: blur(2px);
     /* Subtle blur for better readability */
-    color: #fff;
-    /* Default text color for better contrast */
 }
 
 /* Accessibility Improvements */
@@ -46,27 +43,29 @@ body::before {
 
 /* Enhanced link styles */
 a {
-    color: #7c50ec;
+    color: #4facfe;
     text-decoration: none;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #004080;
+    color: #007bff;
+    ;
 }
-
 
 /* Weather App Container */
 .weather-app {
     width: 90%;
     max-width: 600px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     margin: 48px auto;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     animation: fadeIn 1.2s ease-in-out;
 }
+
 
 /* Header */
 .header {
@@ -76,8 +75,6 @@ a:hover {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px 10px 0 0;
 }
 
 /* Form and Input */
@@ -92,14 +89,11 @@ a:hover {
     flex: 1;
     padding: 15px 20px;
     font-size: 16px;
-    width: 70%;
-    margin-right: 10px;
-    outline: none;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
     background-color: rgba(255, 255, 255, 0.8);
     color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-input:focus {
@@ -110,9 +104,8 @@ a:hover {
 .search-button {
     padding: 15px 30px;
     font-size: 16px;
-    margin-left: 6px;
     background: #4facfe;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -127,39 +120,27 @@ a:hover {
 
 /* Main Section */
 .current-weather {
-    position: relative;
     padding: 30px 20px;
-    background: linear-gradient(to bottom, rgba(9, 132, 227, 0.7), rgba(0, 184, 148, 0.8));
+    background: linear-gradient(to bottom, #4facfe, #00b894);
     color: #fff;
+    justify-content: space-between;
     text-align: center;
     display: flex;
-    position: relative;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    gap: 15px;
 }
 
-.weather-overlay {
-    position: relative;
-    z-index: 10;
-}
 
 .current-city {
     font-size: 35px;
-    color: #333;
-    margin-bottom: 25px;
-    line-height: 45px;
+    color: #222;
     font-weight: 700;
 }
 
 .current-details {
-    color: #666;
-    margin-top: 10px;
     font-size: 17px;
-    line-height: 1.5;
-    opacity: 0.9;
-    font-weight: 500;
+    color: #555;
 }
 
 .current-details strong {
@@ -167,17 +148,15 @@ a:hover {
 }
 
 .current-temperature {
-    color: #fff;
-    margin-top: 20px;
     font-size: 48px;
-    display: flex;
-    align-items: center;
     font-weight: 700;
-    justify-content: center;
+    display: flex;
     flex-direction: column;
     gap: 5px;
-
 }
+
+
+
 
 .current-temperature-value {
     font-size: 48px;
@@ -195,7 +174,7 @@ a:hover {
 
 .weather-icon {
     font-size: 64px;
-    margin-bottom: 10px;
+    color: #4facfe;
 }
 
 
@@ -205,48 +184,35 @@ a:hover {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 15px;
     padding: 15px 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    background: linear-gradient(to bottom, rgba(9, 132, 227, 0.7), rgba(0, 184, 148, 0.8));
-    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
     border-top: 1px solid #ddd;
 }
 
-
 .forecast-item {
-    background: white;
+    background: #fff;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .weather-forecast-day {
     font-size: 16px;
-    color: #333;
-    line-height: 20px;
-    margin-bottom: 10px;
-    text-align: center;
+    color: #222;
+    font-weight: bold;
 }
 
 .weather-forecast-icon {
     font-size: 32px;
-    color: #00f2fe;
-    display: block;
-    margin: 0 auto;
+    color: #4facfe;
+    margin: 10px 0;
 }
 
 .weather-forecast-temperatures {
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+    font-size: 16px;
     color: #333;
 }
 
-.weather-forecast-temperatures span {
-    font-weight: normal;
-}
 
 .weather-forecast-temperature {
     padding: 0 10px;
@@ -254,23 +220,19 @@ a:hover {
 
 /* Footer */
 footer {
-    padding: 15px 20px;
-    color: black;
-    background: rgba(9, 132, 227, 0.7);
-    font-size: 15px;
-    line-height: 1.5;
-    font-size: 14px;
+    padding: 15px;
+    background: #4facfe;
+    color: #fff;
+    text-align: center;
 }
 
 footer a {
-    color: black;
+    color: #095e80;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #74b9ff;
+    color: #ddd;
 }
 
 /* Animations */
@@ -309,7 +271,6 @@ footer a:hover {
 
 /* Responsive Styles */
 
-/* Phones */
 @media (max-width: 480px) {
     .weather-app {
         margin: 20px;
@@ -339,7 +300,6 @@ footer a:hover {
     }
 }
 
-/* Tablets */
 @media (max-width: 768px) {
     body {
         background-size: auto;
@@ -354,16 +314,20 @@ footer a:hover {
     }
 
     .search-input {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .search-button {
-        font-size: 15px;
-        padding: 12px 25px;
+        font-size: 14px;
+        padding: 10px 20px;
     }
 
     .current-city {
-        font-size: 32px;
+        font-size: 28px;
+    }
+
+    .current-temperature {
+        font-size: 36px;
     }
 
     .current-weather {
@@ -397,5 +361,9 @@ footer a:hover {
 
     .current-temperature-value {
         font-size: 90px;
+    }
+
+    .current-temperature {
+        font-size: 48px;
     }
 }
