@@ -43,29 +43,17 @@ body::before {
     z-index: -1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Enhanced link styles */
 a {
-    color: #7c50ec;
+    color: #4facfe;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #0d0229;
+    color: #004080;
 }
+
 
 .weather-app {
     width: 90%;
@@ -265,6 +253,25 @@ footer a:hover {
 }
 
 /* Animations */
+/* Keyframes for Moving Clouds Animation */
+@keyframes moveClouds {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+
+/* Reduce Animation for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -277,15 +284,7 @@ footer a:hover {
     }
 }
 
-@keyframes moveClouds {
-    0% {
-        background-position: 0% 0%;
-    }
 
-    100% {
-        background-position: 100% 0%;
-    }
-}
 
 /* Responsive Styles */
 
