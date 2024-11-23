@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="src/style.css" />
-
-    <title>My Weather Forecast APP</title>
+    <title>Weather Forecast App</title>
 </head>
 
 <body>
@@ -25,14 +22,12 @@
 
         <main>
             <div class="current-weather">
-                <div class="weather-overlay">
-                    <h1 class="current-city" id="current-city">Paris</h1>
-                    <p class="current-details" id="current-details">
-                        <span id="current-date"></span>, <span id="description">moderate rain</span> <br />
-                        Humidity: <strong><span id="humidity-details">87%</span></strong>, Wind: <strong><span
-                                id="speed-details">7.2 km/h</span></strong>
-                    </p>
-                </div>
+                <h1 class="current-city" id="current-city">Paris</h1>
+                <p class="current-details" id="current-details">
+                    <span id="current-date"></span>, <span id="description">Moderate rain</span><br />
+                    Humidity: <strong><span id="humidity-details">87%</span></strong>, Wind: <strong><span
+                            id="speed-details">7.2 km/h</span></strong>
+                </p>
                 <div class="current-temperature">
                     <span id="weather-icon" class="weather-icon">☁️</span>
                     <span class="current-temperature-value" id="current-temperature-value">24</span><span
@@ -44,8 +39,8 @@
                     <p class="weather-forecast-day">Mon</p>
                     <div class="weather-forecast-icon">☁️</div>
                     <div class="weather-forecast-temperatures">
-                        <span class="weather-forecast-temperature">22°C</span> |
-                        <span class="weather-forecast-temperature">15°C</span>
+                        <span class="weather-forecast-temperature">22°C</span> | <span
+                            class="weather-forecast-temperature">15°C</span>
                     </div>
                 </div>
             </div>
